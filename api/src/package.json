@@ -1,0 +1,15 @@
+{
+    "name": "realworld-docker",
+    "version": "1.0.0",
+    "description": "Node.js on Docker",
+    "author": "Kostiantyn Shelehatskyi <uitpm221_shko@student.ztu.edu.ua>",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.16.1",
+        "mongoose": "^6.10.0"
+    }
+}
