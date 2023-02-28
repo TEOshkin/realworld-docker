@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "description": "Node.js on Docker",
     "author": "Kostiantyn Shelehatskyi <uitpm221_shko@student.ztu.edu.ua>",
-    "main": "index.js",
+    "main": "server.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node server.js"
     },
     "dependencies": {
         "dotenv": "^16.0.3",

@@ -2,6 +2,19 @@ version: "3"
 services:
   api:
     build: ./api
+    image: node-server
     command: npm run start
     ports:
-      - "80:8080"
+      - "1234:8080"
+    environment:
+      - PORT=8080
+      - HOST=localhost
+    depends_on:
+      - api_db
+  api_db:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+       - MONGO_URL=mongodb://api_db:27017/api
+    
