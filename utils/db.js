@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
-const {db} = require('./index.js');
-const {User} = require("../models/user")
+const {db} = require('./../configuration');
 
 module.exports.connectDB = () => {
-    mongoose.connect(db, {userNewUrkParser:true});
+    mongoose.connect(db, {useNewUrlParser: true});
     return mongoose.connection
 }

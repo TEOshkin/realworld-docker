@@ -1,15 +1,17 @@
+require('dotenv').config();
+
+const express = require('express');
+
 //Підключаємо конфігурацію
+const server = require("./api/server.js");
 const {port, host} = require("./configuration");
-const {connectDB} = require("./helpers/db.js");
+const {connectDB} = require("./utils/db.js");
 
 //Коннектимось до БД
 connectDB()
     .on('error', console.error.bind(console, 'connection error:'))
-    .once("open", startServer);
+    .once("open", startApp);
 
-//При успішному з'єднанні запускаємо сервер
-function startServer(){
-    app.listen(port, () => {
-        console.log(`Server is running on ${host}:${port}`)
-    })
-}
+function startApp(){
+    server.startServer(port, host);
+} 
