@@ -5,11 +5,13 @@
     "author": "Kostiantyn Shelehatskyi <uitpm221_shko@student.ztu.edu.ua>",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js"
+        "start": "node app.js",
+        "dev": "nodemon --legacy-watch app.js"
     },
     "dependencies": {
         "dotenv": "^16.0.3",
         "express": "^4.16.1",
-        "mongoose": "^6.10.0"
+        "mongoose": "^6.10.0",
+        "nodemon": "^2.0.20"
     }
 }
